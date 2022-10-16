@@ -63,7 +63,7 @@ function weatherDetails(info){
         const city = info.name;
         const country = info.sys.country;
         const {description, id} = info.weather[0];
-        const {temp, feels_like, humidity} = info.main;
+        const {cel, feels_like, humidity} = info.main;
 
         // using custom weather icon according to the id which api gives to us
         if(id == 800){
@@ -81,10 +81,10 @@ function weatherDetails(info){
         }
         
         //passing a particular weather info to a particular element
-        weatherPart.querySelector(".temp .numb").innerText = Math.floor(temp);
+        weatherPart.querySelector(".cel .numb").innerText = Math.floor(temp);
         weatherPart.querySelector(".weather").innerText = description;
         weatherPart.querySelector(".location span").innerText = `${city}, ${country}`;
-        weatherPart.querySelector(".temp .numb-2").innerText = Math.floor(feels_like);
+        weatherPart.querySelector(".cel .numb-2").innerText = Math.floor(feels_like);
         weatherPart.querySelector(".humidity span").innerText = `${humidity}%`;
         infoTxt.classList.remove("pending", "error");
         infoTxt.innerText = "";

@@ -6,30 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Smol Weather App</title>
     <link rel="stylesheet" href="main.css" />
-    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 <body>
-    <header>
-        <h1>Smol Adorable Weather App!</h1>
-    </header>
     <div class="wrapper">
+        <header>
+            <h1>Smol Adorable Weather App!</h1>
+        </header>
         <section class="input-part">
           <p class="info-txt"></p>
           <div class="content">
-            <input type="text" spellcheck="false" placeholder="Enter city name" required>
+            <input type="text" spellcheck="false" placeholder="Name of City" required>
             <div class="separator"></div>
-            <button>Get Device Location</button>
+            <button>Location</button>
           </div>
         </section>
+
+
         <section class="weather-part">
           <img src="" alt="Weather Icon">
           <div class="temp">
+            <div class="location">
+                <i class='bx bx-map'></i>
+                <span>_, _</span>
             <span class="numb">_</span>
             <span class="deg">°</span>C
           </div>
           <div class="weather">_ _</div>
-          <div class="location">
-            <i class='bx bx-map'></i>
-            <span>_, _</span>
           </div>
           <div class="bottom-details">
             <div class="column feels">
@@ -44,9 +45,10 @@
             </div>
             <div class="column humidity">
               <i class='bx bxs-droplet-half'></i>
-              <div class="details">
+                <div class="details">
                 <span>_</span>
                 <p>Humidity</p>
+
               </div>
             </div>
           </div>
